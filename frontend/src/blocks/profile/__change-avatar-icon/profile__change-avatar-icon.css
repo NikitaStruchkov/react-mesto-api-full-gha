@@ -1,0 +1,23 @@
+.profile__change-avatar-icon {
+  background-image: url(../../../images/add-pen.svg);
+  font: inherit;
+  color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 3;
+}
+
+.profile__change-avatar-icon:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition-duration: 0.5s;
+  background-color: rgba(0, 0, 0, 0.6);
+}

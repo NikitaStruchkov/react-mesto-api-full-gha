@@ -1,0 +1,15 @@
+.footer {
+  width: 880px;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    width: var(--main-width);
+  }
+}
+
+@media (max-width: 450px) {
+  .footer {
+    width: calc(100% - 19px * 2);
+  }
+}

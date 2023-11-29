@@ -1,0 +1,13 @@
+.element__likes-quantity {
+padding: 0;
+border: none;
+color: inherit;
+font-family: "Inter", "Arial", sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 1rem;
+text-align: center;
+margin: 0;
+flex-shrink: 0;
+}

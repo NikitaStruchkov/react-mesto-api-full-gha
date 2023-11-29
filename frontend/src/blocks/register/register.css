@@ -1,0 +1,7 @@
+.register {
+  margin: 0 auto;
+  width: 358px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}

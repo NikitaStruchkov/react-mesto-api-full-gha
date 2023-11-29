@@ -1,0 +1,4 @@
+.element_delete_type_disabled {
+    visibility: hidden;
+    background-color: red;
+}

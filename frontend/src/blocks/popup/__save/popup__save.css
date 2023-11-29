@@ -1,0 +1,34 @@
+.popup__save {
+  padding: 0;
+  border: none;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  min-height: 50px;
+  width: 83.26%;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin: 31px 36px 37px;
+  border-radius: 2px;
+}
+
+.popup__save:hover {
+  opacity: 0.6;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+@media (max-width: 450px) {
+  .popup__save {
+    width: calc(100% - 22px * 2);
+    font-size: 14px;
+    line-height: 1.063rem;
+    min-height: 46px;
+    margin: 45px 22px 25px 22px;
+  }
+}

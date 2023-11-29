@@ -1,0 +1,25 @@
+.popup__error-text {
+  color: #ff0000;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.938rem;
+  padding: 0;
+  display: flex;
+  width: 83.26%;
+  margin-top: 5px;
+  margin-left: 36px;
+  margin-bottom: 13px;
+  min-height: 12px;
+}
+
+.popup__error-text:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 450px) {
+  .popup__error-text {
+    margin-left: 22px;
+  }
+}

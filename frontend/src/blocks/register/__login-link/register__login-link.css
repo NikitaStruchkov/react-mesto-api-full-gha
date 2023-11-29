@@ -1,0 +1,12 @@
+.register__login-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Inter', 'Arial', sans-serif;
+}
+
+.register__login-link:hover {
+  color: #a9a9a9;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}

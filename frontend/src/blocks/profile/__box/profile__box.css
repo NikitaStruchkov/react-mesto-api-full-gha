@@ -1,0 +1,14 @@
+.profile__box {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 18px;
+}
+
+@media (max-width: 450px) {
+  .profile__box {
+    gap: 10px;
+  }
+}

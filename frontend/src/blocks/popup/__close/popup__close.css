@@ -1,0 +1,31 @@
+.popup__close {
+  background-image: url(../../../images/close-icon.svg);
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: -37px;
+  top: -37px;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+@media (max-width: 550px) {
+  .popup__close {
+    right: -5px;
+    top: -40px;
+    background-size: 60%;
+  }
+}

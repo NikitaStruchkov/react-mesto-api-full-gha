@@ -1,0 +1,5 @@
+.popup__head_type_sign {
+  /* сверху | горизонтально | снизу */
+  margin: 32px 36px 60px;
+  text-align: center;
+}

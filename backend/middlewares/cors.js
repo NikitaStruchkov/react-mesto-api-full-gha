@@ -2,6 +2,7 @@
 const allowedCors = [
   'https://localhost:3000',
   'http://localhost:3000',
+  'https://me.students.nomoredomainsrocks.ru',
 ];
 
 module.exports = (req, res, next) => {

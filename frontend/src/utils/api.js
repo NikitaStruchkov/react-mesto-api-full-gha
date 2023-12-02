@@ -111,8 +111,8 @@ class Api {
 }
 
 export const api = new Api({
-  // url: 'http://mesto.nomoreparties.co/v1/cohort-68',
-  url: 'http://localhost:3001',
+  url: 'https://api.me.students.nomoredomainsrocks.ru',
+  // url: 'http://localhost:3001',
   headers: {
     // authorization: '44f88861-7aa4-4c69-b219-337a1c6a7261',
     'Content-Type': 'application/json'

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
@@ -26,6 +27,11 @@ app.use(cookieParser()); // для извлечения данных из cookie
 app.use(express.json());
 app.use(cors);
 app.use(requestLogger); // подключаем логгер запросов
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 // роуты
 app.post('/signin', validateLogin, login);
 app.post('/signup', validateCreateUser, createUser);

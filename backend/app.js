@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { rateLimit } = require('express-rate-limit');
 const express = require('express');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
@@ -20,6 +21,14 @@ app.get('/', (req, res) => {
   res.send('test');
 });
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
+  standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
+// store: ... , // Use an external store for consistency across multiple server instances.
+});
+
 // подключаемся к серверу mongo
 mongoose.connect(MONGO_URL);
 app.use(helmet());
@@ -36,7 +45,7 @@ app.get('/crash-test', () => {
 // роуты
 app.post('/signin', validateLogin, login);
 app.post('/signup', validateCreateUser, createUser);
-
+app.use(limiter);
 app.use(userRouter);
 app.use(cardRouter);
 

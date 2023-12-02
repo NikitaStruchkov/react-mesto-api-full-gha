@@ -1,7 +1,6 @@
  import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
-// import PopupWithForm from './PopupWithForm'
 import EditProfilePopup from './EditProfilePopup'
 import EditAvatarPopup from './EditAvatarPopup'
 import ImagePopup from './ImagePopup'
@@ -53,11 +52,10 @@ function App () {
  * если у пользователя есть токен в localStorage,
     эта функция проверит валидность токена
  * 
- */
+ */    
+  const jwt = localStorage.getItem('userId')
   const handleToken = () => {
-    // ТОКЕН
 
-    const jwt = localStorage.getItem('userId')
     if (!jwt) {
       setLoggedIn(false)
       return
@@ -103,7 +101,7 @@ function App () {
 
   useEffect(() => {
     handleToken()
-  }, [])
+  }, [jwt])
 
   // «Реакт» вызовет этот колбэк после того, как компонент будет смонтирован или обновлён.
   useEffect(() => {

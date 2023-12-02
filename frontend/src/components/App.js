@@ -85,6 +85,7 @@ function App () {
         setSuccessfulRegister(true)
          // Сохраняем токен в локальном хранилище
         localStorage.setItem('userId', res.token);
+        
         navigate('/sign-in', { replace: true })
       })
       .catch(err => {

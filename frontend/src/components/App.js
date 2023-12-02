@@ -17,7 +17,7 @@ import InfoTooltip from './InfoTooltip'
 
 function App () {
   const [loggedIn, setLoggedIn] = useState(localStorage.getItem('userId') !== null ? true : false) // вошёл пользователь в систему или нет
-  const [emailUser, setEmailUser] = useState(localStorage.getItem('emailUser')) // email для header
+  const [emailUser, setEmailUser] = useState('') // email для header
   const [successfulRegister, setSuccessfulRegister] = useState(false) // успешная регистрация
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
     React.useState(false)
@@ -67,11 +67,10 @@ function App () {
         if (res) {
           // Сохраняем токен в локальном хранилище
           localStorage.setItem('userId', res.token);
-         // Сохраняем email в локальном хранилище
-          localStorage.setItem('emailUser', res.data.email);
+
           // авторизуем пользователя
           setLoggedIn(true)
-          setEmailUser(res.data.email)
+          setEmailUser(res.email)
           navigate('/', { replace: true })
         } else {
           setLoggedIn(false)

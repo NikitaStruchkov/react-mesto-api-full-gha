@@ -53,9 +53,9 @@ function App () {
     эта функция проверит валидность токена
  * 
  */    
-  const jwt = localStorage.getItem('userId')
-  const handleToken = () => {
 
+  const handleToken = () => {
+    const jwt = localStorage.getItem('userId')
     if (!jwt) {
       setLoggedIn(false)
       return
@@ -83,6 +83,8 @@ function App () {
       .then(res => {
         setInfoTooltipPopupOpen(true)
         setSuccessfulRegister(true)
+         // Сохраняем токен в локальном хранилище
+        localStorage.setItem('userId', res.token);
         navigate('/sign-in', { replace: true })
       })
       .catch(err => {
@@ -101,7 +103,7 @@ function App () {
 
   useEffect(() => {
     handleToken()
-  }, [jwt])
+  }, [])
 
   // «Реакт» вызовет этот колбэк после того, как компонент будет смонтирован или обновлён.
   useEffect(() => {

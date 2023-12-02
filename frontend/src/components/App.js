@@ -16,7 +16,7 @@ import * as auth from '../utils/auth.js'
 import InfoTooltip from './InfoTooltip'
 
 function App () {
-  const [loggedIn, setLoggedIn] = useState(false) // вошёл пользователь в систему или нет
+  const [loggedIn, setLoggedIn] = useState(localStorage.getItem('userId') !== null ? true : false) // вошёл пользователь в систему или нет
   const [emailUser, setEmailUser] = useState('') // email для header
   const [successfulRegister, setSuccessfulRegister] = useState(false) // успешная регистрация
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
@@ -67,7 +67,7 @@ function App () {
         if (res) {
           // Сохраняем токен в локальном хранилище
           localStorage.setItem('userId', res.token);
-          
+
           // авторизуем пользователя
           setLoggedIn(true)
           setEmailUser(res.data.email)

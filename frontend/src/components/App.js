@@ -67,6 +67,7 @@ function App () {
         if (res) {
           // Сохраняем токен в локальном хранилище
           localStorage.setItem('userId', res.token);
+          
           // авторизуем пользователя
           setLoggedIn(true)
           setEmailUser(res.data.email)

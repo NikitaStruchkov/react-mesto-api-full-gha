@@ -10,6 +10,6 @@
 
 IP-адрес 178.154.204.88
 
-Frontend https://http://me.students.nomoredomainsrocks.ru/
+Frontend https://me.students.nomoredomainsrocks.ru/
 
 Backend https://api.http://me.students.nomoredomainsrocks.ru/

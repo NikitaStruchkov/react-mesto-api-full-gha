@@ -65,6 +65,8 @@ function App () {
       .checkToken(jwt)
       .then(res => {
         if (res) {
+          // Сохраняем токен в локальном хранилище
+          localStorage.setItem('userId', res.token);
           // авторизуем пользователя
           setLoggedIn(true)
           setEmailUser(res.data.email)
@@ -83,9 +85,6 @@ function App () {
       .then(res => {
         setInfoTooltipPopupOpen(true)
         setSuccessfulRegister(true)
-         // Сохраняем токен в локальном хранилище
-        localStorage.setItem('userId', res.token);
-        
         navigate('/sign-in', { replace: true })
       })
       .catch(err => {

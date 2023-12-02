@@ -27,6 +27,7 @@ app.use(cookieParser()); // для извлечения данных из cookie
 app.use(express.json());
 app.use(cors);
 app.use(requestLogger); // подключаем логгер запросов
+// краш-тест
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
